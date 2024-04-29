@@ -27,7 +27,7 @@ cbuffer PixelShaderSettings
 
 float4 main(float4 pos : SV_POSITION, float2 tex : TEXCOORD) : SV_TARGET
 {
-
+//hello :)
 	// Read the color value at the current texture coordinate (tex)
     float4 sample = shaderTexture.Sample(samplerState, tex);
      const float3x3 p = {13.323122,23.5112,21.71123,21.1212,28.7312,11.9312,21.8112,14.7212,61.3934};
