@@ -118,5 +118,5 @@ float4 main(float4 pos : SV_POSITION, float2 tex : TEXCOORD) : SV_TARGET
     //float2 uv=float2(1.0,Resolution.y/Resolution.x)*fragCoord.xy
 
     // Draw the terminal graphics over the background
-    return (sample+float4(acc.r,acc.g,acc.b,1));
+    return (sample+float4(acc.r,acc.g,acc.b,0.5));
 }
