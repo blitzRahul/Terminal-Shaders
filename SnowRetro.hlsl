@@ -30,6 +30,9 @@ cbuffer PixelShaderSettings
 static const float M_PI = 3.14159265f;
 
 
+
+
+
 float Gaussian2D(float x, float y, float sigma)
 {
     return 1 / (sigma * sqrt(2 * M_PI)) * exp(-0.5 * (x * x + y * y) / sigma / sigma);
@@ -98,7 +101,7 @@ float4 main(float4 pos : SV_POSITION, float2 tex : TEXCOORD) : SV_TARGET
 
      const float3x3 p = {13.323122,23.5112,21.71123,21.1212,28.7312,11.9312,21.8112,14.7212,61.3934};
     float2 uv=-1.0*float2(1.,Resolution.y/Resolution.x)*pos.xy/Resolution.xy;
-    float3 acc=float3(0.0,0.0,0.0);
+    float3 acc=float3(.0,0.0,0.0);
     float dof=5.0*sin(Time*0.1);
     for(int i=0;i<LAYERS;i++){
          float fi=float(i);
